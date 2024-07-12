@@ -1,4 +1,4 @@
-let numeroMaximo = 100;
+let numeroMaximo = 50;
 
 function exibirTextoTela(tag, texto) {
     let campo = document.querySelector(tag);

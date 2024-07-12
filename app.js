@@ -1,3 +1,5 @@
+let numeroMaximo = 100;
+
 function exibirTextoTela(tag, texto) {
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
@@ -6,7 +8,7 @@ function exibirTextoTela(tag, texto) {
 
 function exibirMensagemInicial() {
     exibirTextoTela('h1', 'Jogo do Número Secreto');
-    exibirTextoTela('p', 'Escolha um número entre 1 e 100');
+    exibirTextoTela('p', 'Escolha um número entre 1 e ' + numeroMaximo);
 }
 
 exibirMensagemInicial();
@@ -37,10 +39,10 @@ function verificarChute() {
 
 function gerarNumeroAleatorio() {
   
-    let numeroEscolhido = parseInt(Math.random() * 4 + 1);
+    let numeroEscolhido = parseInt(Math.random() * numeroMaximo + 1);
     let quantidadeElementosLista = listaNumerosSorteados.length;
 
-    if(quantidadeElementosLista == 4){
+    if(quantidadeElementosLista == numeroMaximo){
         listaNumerosSorteados = [];
     }
 
